@@ -1,6 +1,5 @@
 const cards=document.querySelector(".cards")
 const search=document.querySelector('form input[type="search"]')
-const form=document.querySelector('.search')
 const select=document.querySelector('select')
 class Book{
     static nextId=1
@@ -175,16 +174,14 @@ const booksToShow=library.getBooks()
 read(booksToShow) //Show all books
 let selectValue
 let searchValue
-select.addEventListener("change",(event)=>{
-    event.preventDefault()
+select.addEventListener("change",()=>{
     selectValue=select.value
     searchValue=search.value
     library.filterByCategory(selectValue)
     library.searchBooks(searchValue)
     }
 )
-search.addEventListener("input",(event)=>{
-    event.preventDefault()
+search.addEventListener("input",()=>{
     selectValue=select.value
     searchValue=search.value
     library.filterByCategory(selectValue)
