@@ -67,3 +67,17 @@ form select{
 .btn:hover{
     background-color: rgb(11, 199, 199);
 }
+@media screen and (max-width:992px) {
+    .whiteSpacing{
+    padding: 20px;
+} 
+    h1{
+        font-size: 24px;
+    }
+    form input[type="search"]{
+        width: 240px;
+    }
+    form select{
+        width: 240px;
+    }
+}
